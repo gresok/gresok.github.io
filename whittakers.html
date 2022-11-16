@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Whittaker's Searching Tool</title>
+</head>
+<body>
+<center><h4><font color="black">William Whittaker's Words</font></h4><center>
+   <input type="text" id="LatinI">
+    <button type="button" onclick="EnterWordL()">Latin-English</button>
+ <p><input type="text" id="EnglishI">
+    <button type="button" onclick="EnterWordE()">English-Latin</button>
+<script type="text/javascript">
+    
+
+function EnterWordL() {
+   	 var Page = document.getElementById("LatinI").value;	
+	window.open(
+           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + Page, "_blank");
+     		
+}
+function EnterWordE() {
+         var Page = document.getElementById("EnglishI").value;	
+	window.open(
+           	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
+}
+
+</script>
+</body>
+</html><html>
