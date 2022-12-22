@@ -5,21 +5,21 @@
 </head>
 <body>
 <center><h3><font color="black">William Whittaker's Words</font></h3><center>
-   <input type="text" id="LatinI">
-    <button type="button" onclick="EnterWordL()">Latin-English</button>
- <p><input type="text" id="EnglishI">
-    <button type="button" onclick="EnterWordE()">English-Latin</button>
+   <input type="text" id="boxLatin">
+    <button type="button" onclick="enterLatin()">Latin-English</button>
+ <p><input type="text" id="boxEnglish">
+    <button type="button" onclick="enterEnglish()">English-Latin</button>
 <script type="text/javascript">
     
 
-function EnterWordL() {
-   	 var Page = document.getElementById("LatinI").value;	
+function enterLatin() {
+   	 var Page = document.getElementById("boxLatin").value;	
 	window.open(
            	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + Page, "_blank");
      		
 }
-function EnterWordE() {
-         var Page = document.getElementById("EnglishI").value;	
+function enterEnglish() {
+         var Page = document.getElementById("boxEnglish").value;	
 	window.open(
            	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
 }
