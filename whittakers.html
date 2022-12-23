@@ -10,18 +10,20 @@
  <p><input type="text" id="boxEnglish">
     <button type="button" onclick="enterEnglish()">English-Latin</button>
 <script type="text/javascript">
-    
 
 function enterLatin() {
    	 var Page = document.getElementById("boxLatin").value;	
+	 if (Page != "") {
 	window.open(
            	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + Page, "_blank");
-     		
+	 }
 }
 function enterEnglish() {
-         var Page = document.getElementById("boxEnglish").value;	
+         var Page = document.getElementById("boxEnglish").value;
+	 if (Page != "") {
 	window.open(
            	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
+	 }
 }
 
 </script>
