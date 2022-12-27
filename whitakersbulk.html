@@ -4,7 +4,6 @@
  <title>Whitaker's in Bulk</title>
 </head>
 <body>
-<font color="gray">Note: Not compatible with IOS Safari</font>
 <center><h3><font color="black">William Whitaker's Words</font></h3><center>
    <input type="text" id="inputOne">
    <p><input type="text" id="inputTwo">
@@ -19,59 +18,76 @@
 function enterLatin() {
    	var firstPage = document.getElementById("inputOne").value;	
 	if (firstPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + firstPage, "_blank");
+const firstTimeout = setTimeout(loadfirstlatin, 50);
+function loadfirstlatin() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + firstPage, "_blank");
+}
 }
 	var secondPage = document.getElementById("inputTwo").value;	
 	if (secondPage != "") {
-	window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + secondPage, "_blank");
+const secondTimeout = setTimeout(loadsecondlatin, 75);
+function loadsecondlatin() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + secondPage, "_blank");
+}
 }
 	var thirdPage = document.getElementById("inputThree").value;	
 	if (thirdPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + thirdPage, "_blank");
+const thirdTimeout = setTimeout(loadthirdlatin, 100);
+function loadthirdlatin() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + thirdPage, "_blank");
+}
 }
 	var fourthPage = document.getElementById("inputFour").value;	
 	if (fourthPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + fourthPage, "_blank");
-     		
+const fourthTimeout = setTimeout(loadfourthlatin, 125);
+function loadfourthlatin() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + fourthPage, "_blank");
+}    		
 }
 	var fifthPage = document.getElementById("inputFive").value;	
 	if (fifthPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + fifthPage, "_blank");
-     		
+const fifthTimeout = setTimeout(loadfifthlatin, 150);
+function loadfifthlatin() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + fifthPage, "_blank");
+}   		
 }
 }
+
 function enterEnglish() {
    	var firstPage = document.getElementById("inputOne").value;	
 	if (firstPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + firstPage, "_blank");
+const firstTimeout = setTimeout(loadfirstenglish, 50);
+function loadfirstenglish() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?english=" + firstPage, "_blank");
+}
 }
 	var secondPage = document.getElementById("inputTwo").value;	
 	if (secondPage != "") {
-	window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + secondPage, "_blank");
+const secondTimeout = setTimeout(loadsecondenglish, 75);
+function loadsecondenglish() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?english=" + secondPage, "_blank");
+}
 }
 	var thirdPage = document.getElementById("inputThree").value;	
 	if (thirdPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + thirdPage, "_blank");
+const thirdTimeout = setTimeout(loadthirdenglish, 100);
+function loadthirdenglish() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?english=" + thirdPage, "_blank");
+}
 }
 	var fourthPage = document.getElementById("inputFour").value;	
 	if (fourthPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + fourthPage, "_blank");
-     		
+const fourthTimeout = setTimeout(loadfourthenglish, 125);
+function loadfourthenglish() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?english=" + fourthPage, "_blank");
+}    		
 }
 	var fifthPage = document.getElementById("inputFive").value;	
 	if (fifthPage != "") {
-window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + fifthPage, "_blank");
-     		
+const fifthTimeout = setTimeout(loadfifthenglish, 150);
+function loadfifthenglish() { 
+window.open("https://archives.nd.edu/cgi-bin/wordz.pl?english=" + fifthPage, "_blank");
+}   		
 }
 }
 
