@@ -22,6 +22,7 @@ body {
    <p><input type="text" id="inputThree">
    <p><input type="text" id="inputFour">
    <p><input type="text" id="inputFive">
+   <p><input type="text" id="inputSix">
 <p><button type="button" onclick="enterLatin()">Latin-English</button>
 <button type="button" onclick="enterEnglish()">English-Latin</button>
 <script type="text/javascript">
@@ -55,6 +56,12 @@ window.open(
            	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + fifthPage, "_blank");
      		
 }
+	var sixthPage = document.getElementById("inputSix").value;	
+	if (sixthPage != "") {
+window.open(
+           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + sixthPage, "_blank");
+     		
+}
 }
 function enterEnglish() {
    	var firstPage = document.getElementById("inputOne").value;	
@@ -82,6 +89,12 @@ window.open(
 	if (fifthPage != "") {
 window.open(
            	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + fifthPage, "_blank");
+     		
+}
+	var sixthPage = document.getElementById("inputSix").value;	
+	if (sixthPage != "") {
+window.open(
+           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + sixthPage, "_blank");
      		
 }
 }
