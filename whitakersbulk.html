@@ -26,7 +26,17 @@ body {
 <p><button type="button" onclick="enterLatin()">Latin-English</button>
 <button type="button" onclick="enterEnglish()">English-Latin</button>
 <script type="text/javascript">
-    
+      const inputs = document.querySelectorAll('input');
+      const numInputs = inputs.length;
+      for (let i = 0; i < numInputs; i++) {
+        inputs[i].addEventListener('keydown', function(e) {
+          if (e.keyCode == 38 && i > 0) {
+            inputs[i - 1].focus();
+          } else if (e.keyCode == 40 && i < numInputs - 1 || e.keyCode == 13 && i < numInputs - 1) { 
+            inputs[i + 1].focus();
+          }
+        });
+      }
 
 function enterLatin() {
    	var firstPage = document.getElementById("inputOne").value;	
