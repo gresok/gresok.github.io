@@ -30,6 +30,7 @@ body {
 <p><button class="selectable" data-value="1">Latin-English</button>
 <button class="selectable" data-value="2">English-Latin</button>
 <p class="note">Select a mode to search in, then press enter</p>
+
 <script type="text/javascript">
    
 // get all selectable buttons
@@ -46,25 +47,25 @@ buttons.forEach(button => {
         otherButton.classList.remove('selected');
       }
     });
-    
+// toggle the "selected" class on the clicked button
     button.classList.toggle('selected');
-  
+// set the selected value
     if (button.classList.contains('selected')) {
-      selectedValue = button.dataset.value;
+      langMode = button.dataset.value;
     } else {
-      selectedValue = null;
+      langMode = null;
     }
   });
 });
 function search() {
-   	var Page = document.getElementById("query").value;	
-	if (selectedValue == 1) {
+   	var page = document.getElementById("query").value;	
+	if (langMode == 1) {
 	window.open(
-           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + Page, "_blank");
+           	 "https://archives.nd.edu/cgi-bin/wordz.pl?keyword=" + page, "_blank");
 	}
-	if (selectedValue == 2) {
+	if (langMode == 2) {
 	window.open(
-           	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
+           	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + page, "_blank");
 
 }
 }
