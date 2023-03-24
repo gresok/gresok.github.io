@@ -17,9 +17,9 @@ body {
 <div class="links">
 <h3><a href="index.html">William Whitaker's Words</a></h3>
 </div>
-   <center><input type="text" id="boxLatin">
+   <center><input type="text" id="boxLatin" onkeydown="returnkeyLatin(event)">
     <button type="button" onclick="enterLatin()">Latin-English</button>
- <p><input type="text" id="boxEnglish">
+ <p><input type="text" id="boxEnglish" onkeydown="returnkeyEnglish(event)">
     <button type="button" onclick="enterEnglish()">English-Latin</button>
 <script type="text/javascript">
 
@@ -37,7 +37,18 @@ function enterEnglish() {
            	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
 	 }
 }
+function returnkeyLatin(event) {
+    if (event.key === "Enter") {
+        enterLatin();
+    }
+}
+
+function returnkeyEnglish(event) {
+    if (event.key === "Enter") {
+        enterEnglish();
+    }
+}
 
 </script>
 </body>
-</html><html>
+</html>
