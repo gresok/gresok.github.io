@@ -31,11 +31,11 @@ function enterLatin() {
 	 }
 }
 function enterEnglish() {
-         var Page = document.getElementById("boxEnglish").value;
-	 if (Page != "") {
-	window.open(
-           	 "http://www.archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
-	 }
+	var Page = document.getElementById("boxEnglish").value;
+	if (Page != "") {
+window.open(
+           	 "https://archives.nd.edu/cgi-bin/wordz.pl?english=" + Page, "_blank");
+}
 }
 function returnkeyLatin(event) {
     if (event.key === "Enter") {
