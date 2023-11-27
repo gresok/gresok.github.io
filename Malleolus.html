@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Malleolus' Words</title>
+<style>
+body {
+}
+  .links a {
+	display:block;
+	text-align: center;
+        text-decoration: none;
+        color: #000;
+}
+</style>
+</head>
+<body>
+<div class="links">
+<h3><a href="index.html">Malleolus' Words</a></h3>
+</div>
+   <center><input type="text" id="inputOne">
+   <p><input type="text" id="inputTwo">
+   <p><input type="text" id="inputThree">
+<p><button type="button" onclick="enterLatin()">Search</button>
+<script type="text/javascript">
+      const inputs = document.querySelectorAll('input');
+      const numInputs = inputs.length;
+      for (let i = 0; i < numInputs; i++) {
+        inputs[i].addEventListener('keydown', function(e) {
+          if (e.keyCode == 38 && i > 0) {
+            inputs[i - 1].focus();
+          } else if (e.keyCode == 40 && i < numInputs - 1 || e.keyCode == 13 && i < numInputs - 1) { 
+            inputs[i + 1].focus();
+          }
+        });
+      }
+
+function enterLatin() {
+   	var firstPage = document.getElementById("inputOne").value;	
+	if (firstPage != "") {
+window.open(
+           	 "https://www.perseus.tufts.edu/hopper/morph?l=" + firstPage + "&la=la#lexicon" + "_blank");
+}
+	var secondPage = document.getElementById("inputTwo").value;	
+	if (secondPage != "") {
+	window.open(
+           	 "https://www.perseus.tufts.edu/hopper/morph?l=" + secondPage + "&la=la#lexicon" + "_blank");
+
+}
+	var thirdPage = document.getElementById("inputThree").value;	
+	if (thirdPage != "") {
+window.open(
+           	 "https://www.perseus.tufts.edu/hopper/morph?l=" + thirdPage + "&la=la#lexicon" + "_blank");
+
+}
+}
+
+</script>
+</body>
+</html><html>
