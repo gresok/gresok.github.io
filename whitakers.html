@@ -10,7 +10,23 @@ body {
 	text-align: center;
         text-decoration: none;
         color: #000;
-}
+  }
+    .note {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #999;
+    }
+    .note a {
+	display:block;
+	text-align: center;
+	margin-top: 10px;
+        text-decoration: none;
+        color: #000;
+        font-size: 0.8 rem;
+    }
+    .note a:hover {
+	    color: #00f;
+    }
 </style>
 </head>
 <body>
@@ -21,6 +37,8 @@ body {
     <button type="button" onclick="enterLatin()">Latin-English</button>
  <p><input type="text" id="boxEnglish" onkeydown="returnkeyEnglish(event)">
     <button type="button" onclick="enterEnglish()">English-Latin</button>
+<div class="note">
+ <p></p><a href="whitakersbulk.html">Bulk Version</a>
 <script type="text/javascript">
 
 function enterLatin() {
